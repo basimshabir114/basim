@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark AI Hub - Premium AI Tools Directory</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --card-dark: #1E1E1E;
+            --accent: #BB86FC;
+            --text: #E1E1E1;
+            --text-secondary: #AAAAAA;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0F0C29 0%, #302B63 50%, #24243E 100%);
+            padding: 3rem 0;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .search-bar {
+            background: var(--card-dark);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        #search {
+            width: 100%;
+            padding: 12px;
+            background: #2D2D2D;
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .tool-card {
+            background: var(--card-dark);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            border: 1px solid #333;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border-color: var(--accent);
+        }
+        
+        .tool-card h3 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        
+        .tool-card p {
+            color: var(--text-secondary);
+            min-height: 60px;
+        }
+        
+        .tool-card .category {
+            display: inline-block;
+            background: #333;
+            color: #EEE;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .affiliate-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #6E45E2 0%, #88D3CE 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .affiliate-btn:hover {
+            background: linear-gradient(90deg, #5D3DBD 0%, #6FC5C0 100%);
+            box-shadow: 0 4px 15px rgba(110, 69, 226, 0.3);
+        }
+        
+        footer {
+            background: #0A0A0A;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 1px solid #333;
+        }
+        
+        .disclaimer {
+            background: #1A1A2E;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dark AI Hub</h1>
+            <p>The ultimate directory of AI-powered tools and services</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="🔍 Search 150+ AI tools..." onkeyup="searchTools()">
+        </div>
+        
+        <div class="tool-grid">
+            <!-- Writing Tools -->
+            <div class="tool-card">
+                <span class="category">Writing</span>
+                <h3>Jasper AI</h3>
+                <p>AI content creator that generates high-quality marketing copy, blog posts, and more.</p>
+                <a href="https://jasper.ai?ref=darkaihub" class="affiliate-btn" target="_blank">Get 10,000 Free Credits</a>
+            </div>
+            
+            <div class="tool-card">
+                <span class="category">Writing</span>
+                <h3>Copy.ai</h3>
+                <p>Generate marketing copy, product descriptions, and social media content in seconds.</p>
+                <a href="https://copy.ai?ref=darkaihub" class="affiliate-btn" target="_blank">Start Free Trial</a>
+            </div>
+            
+            <!-- Image Generation -->
+            <div class="tool-card">
+                <span class="category">Images</span>
+                <h3>Midjourney</h3>
+                <p>Create stunning AI-generated artwork with simple text prompts.</p>
+                <a href="https://midjourney.com?ref=darkaihub" class="affiliate-btn" target="_blank">Join Beta</a>
+            </div>
+            
+            <div class="tool-card">
+                <span class="category">Images</span>
+                <h3>Stable Diffusion</h3>
+                <p>Open-source text-to-image model for generating high-quality images.</p>
+                <a href="https://stablediffusionweb.com?ref=darkaihub" class="affiliate-btn" target="_blank">Try Online</a>
+            </div>
+            
+            <!-- Video Tools -->
+            <div class="tool-card">
+                <span class="category">Video</span>
+                <h3>Synthesia</h3>
+                <p>Create AI videos with realistic avatars in 120+ languages.</p>
+                <a href="https://synthesia.io?ref=darkaihub" class="affiliate-btn" target="_blank">Make Free Demo</a>
+            </div>
+            
+            <div class="tool-card">
+                <span class="category">Video</span>
+                <h3>Runway ML</h3>
+                <p>Advanced AI video editing tools for professionals and creators.</p>
+                <a href="https://runwayml.com?ref=darkaihub" class="affiliate-btn" target="_blank">Explore Features</a>
+            </div>
+            
+            <!-- Coding -->
+            <div class="tool-card">
+                <span class="category">Coding</span>
+                <h3>GitHub Copilot</h3>
+                <p>AI pair programmer that suggests code as you type.</p>
+                <a href="https://github.com/features/copilot?ref=darkaihub" class="affiliate-btn" target="_blank">Start Free Trial</a>
+            </div>
+            
+            <div class="tool-card">
+                <span class="category">Coding</span>
+                <h3>Tabnine</h3>
+                <p>AI code completion that supports all major languages and IDEs.</p>
+                <a href="https://tabnine.com?ref=darkaihub" class="affiliate-btn" target="_blank">Download Now</a>
+            </div>
+            
+            <!-- Productivity -->
+            <div class="tool-card">
+                <span class="category">Productivity</span>
+                <h3>Notion AI</h3>
+                <p>AI-powered workspace for notes, tasks, wikis, and databases.</p>
+                <a href="https://notion.so?ref=darkaihub" class="affiliate-btn" target="_blank">Get Started</a>
+            </div>
+            
+            <div class="tool-card">
+                <span class="category">Productivity</span>
+                <h3>Mem.ai</h3>
+                <p>Self-organizing workspace powered by AI.</p>
+                <a href="https://mem.ai?ref=darkaihub" class="affiliate-btn" target="_blank">Try Free</a>
+            </div>
+            
+            <!-- Chatbots -->
+            <div class="tool-card">
+                <span class="category">Chat</span>
+                <h3>ChatGPT Plus</h3>
+                <p>Advanced AI chatbot with GPT-4 capabilities.</p>
+                <a href="https://chat.openai.com?ref=darkaihub" class="affiliate-btn" target="_blank">Chat Now</a>
+            </div>
+            
+            <div class="tool-card">
+                <span class="category">Chat</span>
+                <h3>Claude AI</h3>
+                <p>Anthropic's conversational AI assistant focused on safety.</p>
+                <a href="https://claude.ai?ref=darkaihub" class="affiliate-btn" target="_blank">Start Chatting</a>
+            </div>
+            
+            <!-- Business -->
+            <div class="tool-card">
+                <span class="category">Business</span>
+                <h3>Fireflies.ai</h3>
+                <p>AI meeting assistant that records, transcribes, and summarizes conversations.</p>
+                <a href="https://fireflies.ai?ref=darkaihub" class="affiliate-btn" target="_blank">Try Free</a>
+            </div>
+            
+            <div class="tool-card">
+                <span class="category">Business</span>
+                <h3>Otter.ai</h3>
+                <p>AI-powered voice meetings and conversation intelligence.</p>
+                <a href="https://otter.ai?ref=darkaihub" class="affiliate-btn" target="_blank">Get Started</a>
+            </div>
+            
+            <!-- Design -->
+            <div class="tool-card">
+                <span class="category">Design</span>
+                <h3>Canva AI</h3>
+                <p>Magic design tools powered by artificial intelligence.</p>
+                <a href="https://canva.com?ref=darkaihub" class="affiliate-btn" target="_blank">Design Now</a>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>Affiliate Disclosure:</strong> Some links on this site are affiliate links. We may earn a commission when you make a purchase through these links, at no extra cost to you.
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dark AI Hub | All AI tools belong to their respective owners</p>
+            <p>Contact: partner@darkaihub.com for sponsorship opportunities</p>
+        </div>
+    </footer>
+    
+    <script>
+        function searchTools() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const cards = document.getElementsByClassName('tool-card');
+            
+            for (let card of cards) {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            }
+        }
+        
+        // Add animation when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.tool-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease ' + (index * 0.1) + 's';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
